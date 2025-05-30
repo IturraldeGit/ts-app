@@ -1,0 +1,1 @@
+npm install -D ts-node // library to run ts files in the terminal
