@@ -9,4 +9,3 @@ user = ['juan', 30, false];
 const [userName, age] = user;
 console.log(userName);
 console.log(age);
-
