@@ -1,6 +1,6 @@
 import { faker }  from '@faker-js/faker';
 
-import { addProduct, products } from "./products/product.service";
+import { addProduct, products, updateProduct, findProducts } from "./products/product.service";
 
 for (let i = 0; i < 50; i++) {
   addProduct({
@@ -20,3 +20,16 @@ for (let i = 0; i < 50; i++) {
 console.log(products);
 // This code generates 50 fake product entries using the Faker.js library and adds them to the products array.
 
+const product = products[0];
+updateProduct(product.id, {
+  title: 'New Product',
+  stock: 80,
+  price: 200
+});
+
+findProducts({
+  stock: 10,
+  color: 'red',
+  createdAt: new Date('2023-01-01'),
+  isNew: true,
+})
